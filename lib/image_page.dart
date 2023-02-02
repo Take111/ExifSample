@@ -49,6 +49,10 @@ class _ImagePageState extends State<ImagePage> {
                 final fixedLatLong = await exif.getLatLong();
                 latitude = fixedLatLong?.latitude;
                 longitude = fixedLatLong?.longitude;
+
+                final attributes = await exif.getAttributes();
+                print('attributes ${attributes}');
+                await exif.close();
                 setState(() {});
               },
               child: Text('Change Location Latitude to 100, Longtitude to 100'),
