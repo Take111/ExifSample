@@ -1,3 +1,4 @@
+import 'package:exif_sample/root_page.dart';
 import 'package:flutter/material.dart';
 
 import 'image_page.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const ImagePage());
+        home: const RootPage());
   }
 }
 
